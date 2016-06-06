@@ -4,14 +4,27 @@ package examenfinalparte2;
 import javax.swing.JOptionPane;
 
 public class Principal {
-
+    /**
+     * Variable que en caso de ser true, indica que es un numero primo.
+     */
     public static boolean nPrimo = false;
-
+    /**
+     * Programa para visualizar los numeros primos con el numero de digitos que ha introducido el usuario
+     * @param arg 
+     */
     public static void main(String arg[]) {
         
-        int ndig = 0;
         int numDig = introdNumDig();
+        bucleNumeros(numDig);
         
+    }
+    /**
+     * Metodo que lee todos los numeros con el numero de digitos que introduce el usuario y que contiene el metodo comprobPrimos
+     * para ver si son o no primos.
+     * @param numDig Numero de digitos que introduce el usuario
+     */
+    public static void bucleNumeros(int numDig) {
+        int ndig;
         for (int i = 1; i <= 99999; i++) {
             int aux = i;
 
@@ -25,7 +38,11 @@ public class Principal {
             comprobPrimos(ndig, numDig, i);
         }
     }
-
+    /** Metodo para comprobar los numeros primos con tantos digitos introducidos
+     * @param ndig Es un contador
+     * @param numDig Numero de digitos que introduce el usuario
+     * @param i Variable para condiciones
+     */
     public static void comprobPrimos(int ndig, int numDig, int i) {
         if (ndig == numDig) {
             if (i < 4) {
