@@ -41,7 +41,7 @@ public class Principal {
     /** Metodo para comprobar los numeros primos con tantos digitos introducidos
      * @param ndig Es un contador
      * @param numDig Numero de digitos que introduce el usuario
-     * @param i Variable para condiciones
+     * @param i Variable que representa el numero el cual se comprobara si es primo
      */
     public static void comprobPrimos(int ndig, int numDig, int i) {
         if (ndig == numDig) {
